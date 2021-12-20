@@ -1,0 +1,5 @@
+<del-popup [closeIcon]="true" class="fit-content" (onClose)="onClose()"
+  [title]="'Vous devez avoir un compte ' + (message ? message : 'pour accèder à cette fonctionnalitée !')">
+  <a routerLink="/login" (click)="onClose(false)"><button class="primary fill">Se connecter</button></a>
+  <a routerLink="/validate-phone" (click)="onClose(false)"><button class="primary fill">S'inscrire</button></a>
+</del-popup>

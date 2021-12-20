@@ -1,0 +1,9 @@
+<a *ngIf="backUrl && backUrl !== 'backUrl'" [routerLink]="[backUrl]">
+  <i class="material-icons">close</i>
+</a>
+<span *ngIf="backUrl && backUrl === 'backUrl'" (click)="onBack()">
+  <i class="material-icons">close</i>
+</span>
+<span *ngIf="!backUrl">
+  <i class="material-icons">close</i>
+</span>

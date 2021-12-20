@@ -1,0 +1,55 @@
+<div *ngIf="visible" class="animate__animated animate__fadeIn popup">
+  <div
+    [ngStyle]="{
+      height: getInternetExplorerVersion() === 11 ? '100%' : 'auto',
+      minWidth: getInternetExplorerVersion() === 11 ? '500px' : '',
+      minHeight: minHeight
+    }"
+  >
+    <div class="title">
+      {{ title }}
+      <i
+        class="material-icons close pointer"
+        *ngIf="closeIcon"
+        (click)="onClose.emit()"
+        >close</i
+      >
+    </div>
+    <div class="content">
+      <ng-content></ng-content>
+    </div>
+    <div
+      class="actions"
+      *ngIf="actions.length > 0 || (options && options.length !== 0)"
+    >
+      <div class="border-actions"></div>
+      <div class="row-actions">
+        <ng-select
+          *ngIf="options"
+          appearance="outline"
+          class="fill options"
+          [searchable]="false"
+          [clearable]="false"
+          [ngModel]="selectedOptions"
+          (change)="onChangeOption($event)"
+        >
+          <ng-option *ngFor="let o of options" [value]="o.value">
+            {{ o.label }}
+          </ng-option>
+        </ng-select>
+        <div
+          *ngFor="let action of actions"
+          (click)="onSelectAction(action)"
+          class="pointer"
+          [ngClass]="{
+            'material-icons': action.type && action.type === 'icon',
+            red: action.red && action.red === true,
+            fill: action.fill && action.fill === true
+          }"
+        >
+          {{ action.content }}
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

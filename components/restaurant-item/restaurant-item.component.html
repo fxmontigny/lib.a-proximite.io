@@ -1,0 +1,27 @@
+<div class="image" [class.no-photo]="restaurant.photo ? false : true"
+  [ngStyle]="restaurant.photo ? {'background-image': 'url('+restaurant.photo+')'} : {}">
+  <div *ngIf="restaurant.cashback" class="cashback">
+    <img src="/lib-assets/cashback-white.png" /> {{ cashbackString }}
+  </div>
+</div>
+<div class="title">
+  <div class="name">{{restaurant.name}}</div>
+  <div class="note" *ngIf="restaurant.average_evaluation"><img src="/lib-assets/green-star.svg" />
+    {{restaurant.average_evaluation}}</div>
+</div>
+<div class="sub-name"><span>{{type}}</span>
+  {{restaurant.type ? ' - ' : ''}}
+  {{convertPriceToDollars(restaurant.average_pricing)}}
+</div>
+<div class="eat-options">
+  <div *ngIf="restaurant.distance" class="distance">{{getStringDistance(restaurant.distance)}}</div>
+  <i class="material-icons"
+    *ngIf="restaurant.outOffdelivery === false && restaurant.delivery && restaurant.distance <= 6">directions_bike</i>
+  <i class="material-icons" *ngIf="restaurant.delivery && restaurant.distance === undefined">directions_bike</i>
+  <i class="material-icons color-red" *ngIf="restaurant.outOffdelivery">directions_bike</i>
+  <i class="material-icons" *ngIf="restaurant.take_away">local_mall</i>
+  <i class="material-icons" *ngIf="restaurant.eat_in">local_dining</i>
+</div>
+<div class="in-comming" *ngIf="!restaurant.id">
+  Bientôt partenaire Delivreetic
+</div>

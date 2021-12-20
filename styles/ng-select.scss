@@ -1,0 +1,18 @@
+ng-select.no-ui {
+	.ng-select-container {
+		border: none;
+	}
+
+	.ng-arrow-wrapper {
+		opacity: 0;
+	}
+}
+
+.ng-select.ng-select-single .ng-select-container {
+	height: 40px;
+}
+
+.ng-select .ng-select-container {
+	border-radius: 8px;
+	border: 1px solid black;
+}

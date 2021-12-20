@@ -1,0 +1,10 @@
+<img *ngIf="value && (preview || showForce)" [src]="value | sanitizeResourceUrl"
+  [ngStyle]="{'max-height': maxWidth+'px'}" />
+<button (click)="onChangeRestaurantPhoto()" class="outline" type="button">{{value ? 'Changer l\'image' : 'Choisir une
+  image'}}
+</button>
+<button (click)="onRemove()" class="outline" type="button">Supprimer
+</button>
+<button *ngIf="previewBt && value" (click)="showForce = !showForce" class="outline" type="button">{{showForce ? 'Cacher'
+  : 'Voir'}}
+</button>

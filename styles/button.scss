@@ -1,0 +1,82 @@
+button {
+	height: 51px;
+	line-height: 51px;
+	border-radius: 16px;
+	color: fColor(cblack);
+	font-weight: 500;
+	border: none;
+	padding: 0 24px;
+	cursor: pointer;
+	-webkit-appearance: none;
+
+	&:focus {
+		outline: none;
+	}
+
+	&.red {
+		background-color: rgba(fColor(cred), 0.2);
+		color: fColor(cred);
+	}
+
+	&.green {
+		background-color: rgba(fColor(ckale), 0.2);
+		color: fColor(ckale);
+	}
+
+	&.blue {
+		background-color: rgba(fColor(criviere), 0.2);
+		color: fColor(criviere);
+	}
+
+	&.fill {
+		&.primary {
+			background-color: fColor(primary);
+			color: fColor(ckale);
+		}
+
+		&.secondary {
+			background-color: fColor(cmango);
+		}
+	}
+
+	&.outline {
+		background-color: rgba(fColor(primary), 0.2);
+		height: 27px;
+		line-height: 27px;
+		border: 1px solid fColor(primary);
+		color: fColor(primary);
+		font-weight: 500;
+		font-size: 14px;
+		border-radius: 8px;
+		padding: 0 8px;
+
+		&.primary {
+			background-color: rgba(fColor(ckale), 0.2);
+			border: 1px solid fColor(ckale);
+			color: fColor(ckale);
+		}
+
+		&.large-height {
+			height: 51px;
+			line-height: 51px;
+			border-radius: 16px;
+		}
+
+		&.red {
+			border: 1px solid fColor(cred);
+			background-color: rgba(fColor(cred), 0.2);
+			color: fColor(cred);
+		}
+	}
+
+	&.s {
+		font-size: 14px;
+		height: 46px;
+		line-height: 46px;
+		padding: 0 16px;
+	}
+
+	&.xs {
+		font-size: 11px;
+	}
+}

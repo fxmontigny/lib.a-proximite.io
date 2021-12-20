@@ -1,0 +1,5 @@
+<div class="less" *ngIf="hideLess === false" (click)="setDelta(-1)" [class.active]="min === null || min <= value - 1">-
+</div>
+<div class="less" *ngIf="hideLess === true"></div>
+<p>{{value}}</p>
+<div class="plus" (click)="setDelta(1)" [class.active]="max === null || max > value">+</div>

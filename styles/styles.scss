@@ -1,0 +1,231 @@
+@import "~@angular/material/prebuilt-themes/indigo-pink.css";
+@import "~@ng-select/ng-select/themes/default.theme.css";
+@import 'material-icons/iconfont/material-icons.css';
+@import "./angular-material.scss";
+@import "./utils.scss";
+@import "./form.scss";
+@import "./material.scss";
+@import "./typography.scss";
+@import "./button.scss";
+@import "./ng-select.scss";
+@import "./wrapper.scss";
+
+html,
+body {
+	height: 100vh;
+	padding: 0;
+	margin: 0;
+	background-color: fColor(cfarine);
+}
+
+* {
+	box-sizing: border-box;
+}
+
+a {
+	color: fColor(cblack);
+	font-weight: 500;
+	text-decoration: underline;
+}
+
+.color-primary {
+	color: fColor(primary) !important;
+}
+
+.color-red {
+	color: fColor(cred) !important;
+}
+
+.horizontal-scroll {
+	display: flex;
+	overflow-x: scroll;
+}
+
+button.mat-primary.add-button,
+button[mat-raised-button][color=primary] {
+	span,
+	mat-icon {
+		color: white;
+	}
+}
+
+img {
+	max-width: 100%;
+}
+
+.pointer {
+	cursor: pointer;
+}
+
+.text-align-center {
+	text-align: center;
+}
+
+.text-align-right {
+	text-align: right;
+}
+
+.ms-box {
+	box-shadow: 0 1px 1px 0 rgba(0, 0, 0, 0.2);
+	background-color: #ffffff;
+}
+
+.nowrap {
+	white-space: nowrap;
+}
+
+.no-underline {
+	text-decoration: none;
+
+	&:hover {
+		text-decoration: none;
+	}
+}
+
+.width100 {
+	width: 100%;
+}
+
+.black {
+	color: #354052 !important;
+}
+
+.cred {
+	color: fColor(cred) !important;
+}
+
+.opacity-50 {
+	opacity: 0.5;
+}
+
+.white-herit * {
+	color: white;
+}
+
+.wrapper {
+	max-width: 1400px;
+	width: 95%;
+	margin: auto;
+}
+
+.is-mobile .wrapper {
+	width: 100%;
+	max-width: inherit;
+}
+
+.margin-right-8 {
+	margin-right: 8px;
+}
+
+.p-or {
+	margin: 16px 0;
+}
+
+.flex-1,
+.space {
+	flex: 1;
+}
+.flex-2 {
+	flex: 2;
+}
+.flex-3 {
+	flex: 3;
+}
+
+.d-flex {
+	display: flex;
+}
+
+.relative {
+	position: relative;
+}
+
+.capitalize {
+	text-transform: capitalize;
+}
+
+.title-text-box {
+	color: fColor("h2");
+	margin-bottom: 11px;
+}
+
+.radius-0 {
+	border-radius: 0;
+}
+
+.bold {
+	font-weight: bold;
+}
+
+.my-select {
+	height: 32px;
+
+	.ng-select-container {
+		min-height: 32px;
+		height: 32px !important;
+		border-color: fColor("cpurple-dark");
+		font-size: 14px;
+	}
+}
+
+.my-select-event {
+	height: 39px;
+
+	.ng-select-container {
+		min-height: 39px;
+		height: 39px !important;
+		border-color: fColor("cpurple-dark");
+		font-size: 14px;
+	}
+}
+
+.ng-select.ng-select-focused {
+	.ng-select-container {
+		border-color: fColor("cpurple-dark") !important;
+		box-shadow: none !important;
+	}
+}
+
+.angular-editor-toolbar {
+	background-color: fColor("cwhite") !important;
+	border: none !important;
+}
+
+.angular-editor-textarea {
+	border-radius: 4px;
+	border-color: fColor("cpurple-dark") !important;
+	&:focus {
+		outline: none !important;
+		box-shadow: none !important;
+	}
+}
+
+.my-select-exercise {
+	width: 148px;
+	margin-right: 8px;
+
+	> div {
+		border: solid 1px fColor("primary") !important;
+		border-radius: 4px;
+		height: 48px !important;
+		color: #28195c;
+	}
+
+	&.ng-select-focused .ng-select-container {
+		border: solid 1px fColor("primary") !important;
+	}
+}
+
+.is-mobile {
+	display: none;
+}
+
+@media screen and (max-width: 1070px) {
+	.is-mobile {
+		display: block;
+	}
+
+	.is-desktop {
+		display: none;
+	}
+}

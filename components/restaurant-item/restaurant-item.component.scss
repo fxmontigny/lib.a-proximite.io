@@ -1,0 +1,114 @@
+@import "../../styles/utils.scss";
+
+:host {
+	padding: 8px 8px 8px 8px;
+	margin: 32px;
+	border-radius: 16px;
+	background-color: white;
+	display: flex;
+	flex-direction: column;
+	box-shadow: 0px 10px 40px rgba(31, 56, 50, 0.1);
+	
+	.image {
+		background-size: cover;
+		background-position: center;
+		min-height: 126px;
+		border-radius: 10px;
+		display: flex;
+		align-items: flex-end;
+		justify-content: flex-start;
+		background-color: fColor(cfarine);
+		flex: 1;
+		position: relative;
+
+		&.no-photo {
+			min-height: 64px;
+		}
+	}
+
+	.title {
+		display: flex;
+		justify-content: space-between;
+	}
+
+	.name {
+		font-weight: 600;
+		font-size: 16px;
+		color: fColor(cblack);
+		margin-top: 11px;
+		margin-bottom: 3px;
+	}
+
+	.sub-name {
+		font-size: 11px;
+		text-transform: capitalize;
+		color: fColor(cmediumgray);
+		display: flex;
+
+		span {
+			max-width: 80%;
+			display: inline-block;
+			overflow: hidden;
+			white-space: nowrap;
+			text-overflow: ellipsis;
+			margin-right: 4px;
+		}
+	}
+
+	.note {
+		font-weight: 600;
+		font-size: 11px;
+		color: fColor(cblack);
+		align-items: center;
+		display: flex;
+		margin-top: 7px;
+		min-width: 35px;
+
+		img {
+			margin-right: 4px;
+			position: relative;
+			top: -2px;
+		}
+	}
+
+	.eat-options {
+		display: flex;
+		align-items: center;
+		margin-top: 4px;
+
+		i {
+			color: fColor(cmediumgray);
+			font-size: 14px;
+			margin-right: 8px;
+		}
+
+		.distance {
+			margin-right: 16px;
+			font-size: 11px;
+			color: fColor(cmediumgray);
+		}
+	}
+
+	.cashback {
+		border-radius: 10px;
+		background-color: rgba(fColor(ckale), 0.5);
+		height: 35px;
+		line-height: 35px;
+		padding: 0 9px;
+		font-size: 11px;
+		font-weight: bold;
+		color: white;
+		position: absolute;
+		bottom: 16px;
+		left: 16px;
+
+		img {
+			margin-right: 4px;
+		}
+	}
+}
+
+.in-comming {
+	font-size: 14px;
+	color: fColor(cblack);
+}
