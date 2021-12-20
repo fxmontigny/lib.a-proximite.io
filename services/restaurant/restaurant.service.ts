@@ -167,7 +167,7 @@ export class RestaurantService {
 
   getAll () {
     return this.serverService
-      .get('restaurants')
+      .getWithoutError('restaurants')
       .then((data) => data.data || [])
   }
 
