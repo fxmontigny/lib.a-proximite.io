@@ -10,7 +10,7 @@ import { BehaviorSubject } from 'rxjs';
 })
 export class ServerService {
 	userToken: BehaviorSubject<any> = new BehaviorSubject<any>(null);
-	serverUrl: string = environment.serverUrl;
+	serverUrl: string = environment.site.api;
 
 	constructor(private _http: HttpService) {}
 
