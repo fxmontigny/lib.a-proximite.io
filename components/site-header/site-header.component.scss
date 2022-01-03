@@ -6,7 +6,7 @@
 
 	.menu {
 		height: 80px;
-		background-color: fColor(ckale);
+		background-color: fColor(cblue);
 		position: fixed;
 		left: 0;
 		right: 0;
@@ -35,7 +35,7 @@
 
 		p,
 		a {
-			color: fColor(cfarine);
+			color: fColor(cred);
 			position: relative;
 
 			&.active {
@@ -47,7 +47,7 @@
 					right: 0;
 					height: 4px;
 					opacity: 0.8;
-					background-color: fColor(cfarine);
+					background-color: fColor(cred);
 				}
 			}
 		}
@@ -72,14 +72,14 @@
 	left: 0;
 	right: 0;
 	bottom: 0;
-	background-color: fColor(ckale);
+	background-color: fColor(cblue);
 	z-index: 1;
 
 	a {
 		margin: 14px 24px;
 		width: calc(100% - 48px);
 		font-size: 18px;
-		color: white;
+		color: fColor(cred);
 		position: relative;
 		display: inline-block;
 		text-decoration: none;
@@ -92,7 +92,7 @@
 			right: -9px;
 			height: 4px;
 			opacity: 0.5;
-			background-color: fColor(cfarine);
+			background-color: fColor(cred);
 		}
 	}
 }

@@ -1,5 +1,7 @@
 export interface CategoryInterface {
-  image?: string;
-  label?: string;
+  id: number;
+  image: string;
+  title: string;
+  description: string;
   count?: number;
 }

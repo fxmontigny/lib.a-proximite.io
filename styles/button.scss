@@ -30,8 +30,8 @@ button {
 
 	&.fill {
 		&.primary {
-			background-color: fColor(primary);
-			color: fColor(ckale);
+			background-color: fColor(cred);
+			color: white;
 		}
 
 		&.secondary {
@@ -78,5 +78,12 @@ button {
 
 	&.xs {
 		font-size: 11px;
+		height: 32px;
+		line-height: 32px;
+		border-radius: 8px;
 	}
+}
+
+a.button {
+	display: inline-block;
 }
