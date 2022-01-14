@@ -1,32 +1,31 @@
 <div class="menu">
   <div class="wrapper">
-    <a [href]="environment.site.www" class="logo"><img src="/lib-assets/logo-name.png" alt="logo" />
+    <a [href]="environment.site.www" class="logo">
+      <!-- <img src="/lib-assets/logo-name.png" alt="logo" />--> À Proximité
     </a>
     <div class="flex-1"></div>
     <a [href]="environment.site.www+'commercant'" class="is-desktop"
-      [ngClass]="{active: isActive(environment.site.www+'commercant')}">Vous êtes un Commerçant ?</a>
+      [ngClass]="{active: isActive(environment.site.www+'commercant')}">Vous êtes commerçant</a>
     <a [href]="environment.site.www+'mairie'" class="is-desktop"
-      [ngClass]="{active: isActive(environment.site.www+'mairie')}">Une Mairie ?</a>
+      [ngClass]="{active: isActive(environment.site.www+'mairie')}">Vous êtes une mairie</a>
     <a [href]="environment.site.www+'contact'" class="is-desktop"
       [ngClass]="{active: isActive(environment.site.www+'contact')}">Nous contacter</a>
     <a [href]="environment.site.restaurant" class="is-desktop"
-      [ngClass]="{active: isActive(environment.site.restaurant)}">Espace commerçant</a>
+      [ngClass]="{active: isActive(environment.site.restaurant)}">Espace vendeur</a>
     <div class="flex-1 is-mobile"></div>
     <span class="material-icons is-mobile burger-menu" (click)="showPopupMenu = !showPopupMenu">menu</span>
   </div>
 </div>
 <div *ngIf="showPopupMenu" class="popup-menu animate__animated animate__fadeInDown">
-  <a [href]="environment.site.www" [ngClass]="{active: isActive(environment.site.www)}">Delivreetic</a>
-  <a [href]="environment.site.www+'a-propos'" [ngClass]="{active: isActive(environment.site.www+'a-propos')}">À
-    propos</a>
+  <a [href]="environment.site.www" [ngClass]="{active: isActive(environment.site.www)}">À proximité</a>
   <a [href]="environment.site.www+'commercant'" [ngClass]="{active: isActive(environment.site.www+'commercant')}">Vous
-    êtes un Commerçant ?</a>
+    êtes commerçant</a>
   <a [href]="environment.site.www+'mairie'" [ngClass]="{active: isActive(environment.site.www+'mairie')}">Vous êtes
-    une Mairie ?</a>
+    une mairie</a>
   <a [href]="environment.site.www+'contact'" [ngClass]="{active: isActive(environment.site.www+'contact')}">Nous
     contacter</a>
   <a [href]="environment.site.restaurant" [ngClass]="{active: isActive(environment.site.restaurant)}">Espace
-    commerçant</a>
+    vendeur</a>
   <a [href]="environment.site.www+'faq'" [ngClass]="{active: isActive(environment.site.www+'faq')}">FAQ</a>
   <a [href]="environment.site.www+'mentions-legales'"
     [ngClass]="{active: isActive(environment.site.www+'mentions-legales')}">Mentions légales</a>
