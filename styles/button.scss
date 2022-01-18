@@ -1,9 +1,8 @@
 button {
-	height: 51px;
-	line-height: 51px;
-	border-radius: 16px;
+	height: 32px;
+	line-height: 32px;
+	border-radius: 32px;
 	color: fColor(cblack);
-	font-weight: 500;
 	border: none;
 	padding: 0 24px;
 	cursor: pointer;
@@ -40,20 +39,13 @@ button {
 	}
 
 	&.outline {
-		background-color: rgba(fColor(primary), 0.2);
-		height: 27px;
-		line-height: 27px;
+		background-color: white;
 		border: 1px solid fColor(primary);
 		color: fColor(primary);
-		font-weight: 500;
-		font-size: 14px;
-		border-radius: 8px;
-		padding: 0 8px;
 
 		&.primary {
-			background-color: rgba(fColor(ckale), 0.2);
-			border: 1px solid fColor(ckale);
-			color: fColor(ckale);
+			border: 1px solid fColor(cred);
+			color: fColor(cred);
 		}
 
 		&.large-height {

@@ -1,5 +1,4 @@
 $colors: (
-	primary: #fbb217,
 	cblack: #121212,
 	cblacklight: #414141,
 	cblackmid: #2f2f2f,
@@ -11,7 +10,6 @@ $colors: (
 	criviere: #81b7d4,
 	cviolette: #bab3df,
 	ckale: #014833,
-	cred: #A84409,
 	cloveapple: #ff764c,
 	cfarine: #FFFEFD,
 	cchataigne: #90471c,
@@ -20,7 +18,10 @@ $colors: (
 	cbrown: #ee9222,
 	cneige: #FFFF,
 	cblue: #CCDAD6,
-	cdarkblue: #012E48,
+	/////// next
+	primary: #002654,
+	cdarkblue: #002654,
+	cred: #CE1126,
 );
 @function fColor($key: "cprimary") {
 	@return map-get($colors, $key);

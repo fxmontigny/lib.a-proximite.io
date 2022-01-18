@@ -1,86 +1,91 @@
 @import "../../styles/utils.scss";
 
 :host {
-	display: block;
-	padding: 32px 0;
-	background-color: white;
+  display: block;
+  padding: 32px 0;
+  background-color: fColor(primary);
+
+  .logo {
+    font-weight: 600;
+    font-size: 24px;
+    margin-bottom: 16px;
+
+    span {
+      color: fColor(cred);
+    }
+  }
 }
 
-a {
-	display: block;
-	text-decoration: none;
-	color: fColor(ckale);
+a,
+p {
+  color: white;
+  text-decoration: none;
+  display: block;
 }
 
-.panel {
-	display: flex;
+.wrapper {
+  display: flex;
 
-	> div {
-		flex: 1;
-		margin-right: 16px;
+  > div {
+    flex: 1;
+    margin-right: 16px;
 
-		&:last-child {
-			margin-right: 0;
-		}
+    &:last-child {
+      margin-right: 0;
+    }
 
-		.reseaux {
-			width: 30px;
-			margin: 16px 16px 16px 0;
-			display: inline-block;
-		}
-	}
+    &.contact,
+    &.pages {
+      a {
+        text-align: center;
+        margin-bottom: 8px;
+      }
+    }
 
-	@media (max-width: 900px) {
-		flex-wrap: wrap;
+    .reseaux {
+      width: 30px;
+      margin: 16px 16px 16px 0;
+      display: inline-block;
+    }
+  }
 
-		> div {
-			width: 50%;
-			flex: none;
-			margin-right: 0;
-			margin-bottom: 16px;
-		}
-	}
+  @media (max-width: 900px) {
+    flex-wrap: wrap;
 
-	@media (max-width: 450px) {
-		> div {
-			width: 100%;
-		}
-	}
+    > div {
+      width: 50%;
+      flex: none;
+      margin-right: 0;
+      margin-bottom: 16px;
+    }
+  }
+
+  @media (max-width: 450px) {
+    > div {
+      width: 100%;
+    }
+  }
 }
 
 b {
-	color: fColor(ckale);
+  color: fColor(ckale);
 }
 
 img {
-	max-height: 40px;
-}
-
-.about {
-	display: flex;
+  max-height: 40px;
 }
 
 .name {
-	display: flex;
-	flex-direction: column;
-	align-items: center;
-	margin-bottom: 16px;
-	margin-right: 16px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 16px;
+  margin-right: 16px;
 
-	img {
-		margin-right: 16px;
-		width: 100px;
-		max-height: inherit;
-		margin-bottom: 16px;
-	}
-}
-
-.copyright {
-	margin-top: 24px;
-	text-align: center;
-}
-
-.umih {
-	height: 60px;
-	max-height: 60px;
+  img {
+    margin-right: 16px;
+    width: 100px;
+    max-height: inherit;
+    margin-bottom: 16px;
+  }
 }

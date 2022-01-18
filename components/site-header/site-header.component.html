@@ -1,17 +1,17 @@
 <div class="menu">
   <div class="wrapper">
-    <a [href]="environment.site.www" class="logo">
-      <!-- <img src="/lib-assets/logo-name.png" alt="logo" />--> À Proximité
-    </a>
+    <a [href]="environment.site.www" class="logo"><span>À</span>&nbsp;Proximité<span>.</span></a>
     <div class="flex-1"></div>
+    <a [href]="environment.site.www" class="is-desktop" [ngClass]="{active: isActive(environment.site.www)}">Accueil</a>
     <a [href]="environment.site.www+'commercant'" class="is-desktop"
-      [ngClass]="{active: isActive(environment.site.www+'commercant')}">Vous êtes commerçant</a>
+      [ngClass]="{active: isActive(environment.site.www+'commercant')}">Espace Commerçant</a>
     <a [href]="environment.site.www+'mairie'" class="is-desktop"
-      [ngClass]="{active: isActive(environment.site.www+'mairie')}">Vous êtes une mairie</a>
+      [ngClass]="{active: isActive(environment.site.www+'mairie')}">Espace Mairie</a>
     <a [href]="environment.site.www+'contact'" class="is-desktop"
       [ngClass]="{active: isActive(environment.site.www+'contact')}">Nous contacter</a>
-    <a [href]="environment.site.restaurant" class="is-desktop"
-      [ngClass]="{active: isActive(environment.site.restaurant)}">Espace vendeur</a>
+    <div class="flex-1"></div>
+    <a [href]="environment.site.restaurant" class="is-desktop is-button"
+      [ngClass]="{active: isActive(environment.site.restaurant)}">Se connecter</a>
     <div class="flex-1 is-mobile"></div>
     <span class="material-icons is-mobile burger-menu" (click)="showPopupMenu = !showPopupMenu">menu</span>
   </div>

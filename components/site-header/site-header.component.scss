@@ -2,11 +2,16 @@
 
 :host {
 	display: block;
-	height: 80px;
+	height: 124px;
+
+	&.is-scrolled {
+		.menu {
+			background-color: white;
+		}
+	}
 
 	.menu {
-		height: 80px;
-		background-color: fColor(cblue);
+		height: 124px;
 		position: fixed;
 		left: 0;
 		right: 0;
@@ -17,49 +22,53 @@
 	.wrapper {
 		display: flex;
 		align-items: center;
-		height: 80px;
+		height: 44px;
+		box-sizing: initial;
+		padding: 40px 0;
 
-		.logo {
-			display: flex;
-			align-items: center;
-			font-weight: bold;
+		a {
 			color: fColor(cdarkblue);
-			text-transform: uppercase;
+			position: relative;
+			margin-left: 32px;
+			font-size: 16px;
+			font-weight: normal;
+			text-decoration: none;
 
-			@media screen and (max-width: 1070px) {
+			&:first-child {
 				margin-left: 0;
 			}
-		}
-
-		img {
-			height: 52px;
-			margin-right: 4px;
-		}
-
-		p,
-		a {
-			color: fColor(cred);
-			position: relative;
 
 			&.active {
 				&:after {
 					content: " ";
 					position: absolute;
-					left: 0;
+					left: calc(50% - 15px);
 					top: calc(100% + 4px);
-					right: 0;
-					height: 4px;
-					opacity: 0.8;
+					width: 30px;
+					height: 2px;
+					border-radius: 4px;
 					background-color: fColor(cred);
 				}
 			}
-		}
 
-		a {
-			margin-left: 32px;
-			font-size: 16px;
-			font-weight: normal;
-			text-decoration: none;
+			&.logo {
+				font-weight: 600;
+				font-size: 24px;
+				color: fColor(cdarkblue);
+	
+				span {
+					color: fColor(cred);
+				}
+			}
+
+			&.is-button {
+				background-color: fColor(cred);
+				color: white;
+				padding: 0 16px;
+				height: 32px;
+				line-height: 32px;
+				border-radius: 32px;
+			}
 		}
 
 		.burger-menu {

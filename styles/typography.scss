@@ -1,109 +1,132 @@
-@import "./Poppins/Poppins.scss";
+@import "./Montserrat/Montserrat.scss";
+@import "./Epilogue/Epilogue.scss";
 
 html,
 body,
 button,
+p,
+input {
+  font-family: "Montserrat";
+  margin: 0;
+
+  &.light {
+    font-family: "Montserrat-light";
+  }
+}
+
 h1,
 h2,
 h3,
 h4,
 h5,
-h6,
-p,
-input {
-	font-family: "Poppins";
-	margin: 0;
+h6 {
+  font-family: "Epilogue";
+  margin: 0;
+
+  &.light {
+    font-family: "Epilogue-light";
+  }
 }
 
 h1 {
-	font-size: 40px;
-	line-height: 46px;
-	color: fColor(cdarkblue);
+  font-size: 40px;
+  line-height: 46px;
+  font-weight: normal;
+  color: fColor(primary);
 
-	b {
-		color: fColor(cred);
-	}
+  b {
+    color: fColor(cred);
+  }
 }
 
 h2 {
-	font-size: 32px;
-	line-height: 37px;
-	color: fColor(cdarkblue);
+  font-size: 32px;
+  line-height: 37px;
+  color: fColor(primary);
 
-	b {
-		color: fColor(cred);
-	}
+  b {
+    color: fColor(cred);
+  }
 }
 
 h3 {
-	font-size: 28px;
-	color: fColor(cdarkblue);
+  font-size: 28px;
+  color: fColor(primary);
 
-	b {
-		color: fColor(cred);
-	}
+  b {
+    color: fColor(cred);
+  }
 }
 
 h4 {
-	font-size: 24px;
-	color: fColor(cdarkblue);
+  font-size: 24px;
+  color: fColor(primary);
 
-	b {
-		color: fColor(cred);
-	}
+  b {
+    color: fColor(cred);
+  }
 }
 
 h5 {
-	font-size: 20px;
-	color: fColor(cdarkblue);
+  font-size: 20px;
+  color: fColor(primary);
 
-	b {
-		color: fColor(cred);
-	}
+  b {
+    color: fColor(cred);
+  }
 }
 
 h6 {
-	font-size: 18px;
-	color: fColor(cdarkblue);
+  font-size: 18px;
+  color: fColor(primary);
 
-	b {
-		color: fColor(cred);
-	}
+  b {
+    color: fColor(cred);
+  }
+}
+
+button {
+  font-size: 16px;
+  letter-spacing: 0.31px;
 }
 
 p,
 li {
-	font-size: 16px;
-	color: fColor(ckale);
+  font-size: 16px;
+  line-height: 21px;
+  color: fColor(primary);
+  letter-spacing: 1px;
 
-	&.s {
-		font-size: 14px;
-	}
+  &.s {
+    font-size: 14px;
+  }
 
-	&.xs {
-		font-size: 11px;
-	}
+  &.xs {
+    font-size: 11px;
+  }
 
-	b {
-		color: fColor(cred);
-	}
+  b {
+    color: fColor(cred);
+  }
 }
 
-p, li, span {
-	&.tag {
-		font-size: 11px;
-		padding: 4px;
-		border-radius: 4px;
-		background-color: fColor(cgraylight);
+p,
+li,
+span {
+  &.tag {
+    font-size: 11px;
+    padding: 4px;
+    border-radius: 4px;
+    background-color: fColor(cgraylight);
 
-		&.red {
-			background-color: fColor(cred);
-			color: white;
-		}
+    &.red {
+      background-color: fColor(cred);
+      color: white;
+    }
 
-		&.green {
-			background-color: fColor(ckale);
-			color: white;
-		}
-	}
+    &.green {
+      background-color: fColor(ckale);
+      color: white;
+    }
+  }
 }
